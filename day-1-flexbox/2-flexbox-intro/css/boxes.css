@@ -13,9 +13,22 @@ li {
 	padding: 0.5em;
 }
 
+ul {
+	display: flex;
+/*	flex-direction: row; */
+/*	flex-wrap: wrap-reverse; */
+	flex-flow: row wrap;
+	justify-content: center;
+	height: 400px;
+	align-items: center;
+}
 
 
-
-
-
-
+.flex2 {
+	border: 2px dotted blue;
+	order: 1;
+	/*flex-basis: 30%;*/
+	/*flex-grow: 1;*/
+	/*flex-shrink: 2;*/
+	flex: 1 1 200px;
+}
