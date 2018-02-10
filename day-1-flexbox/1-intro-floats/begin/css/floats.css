@@ -32,12 +32,13 @@ div img {
 
 /* grid system -- mobile first! */
 [class*="col-"] {
+  width: 92%;
   margin-left: 4%;
   margin-right: 4%;
-  float: left;
+  min-height: 1px;
 }
 
-.col-1 {
+.col-1, .col-1-4 {
   background: goldenrod;
 }
 
@@ -59,17 +60,26 @@ div img {
   clear: both;
 }
 
-
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
-  .col-1, .col-2 {
+
+  [class*="col-"] {
+    margin-right: 0;
+    min-height: 1px;
+    float: left;
+  }
+
+  .col-1,
+  .col-1-4,
+  .col-2 {
     width: 44%;
   }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
 
-  .col-1 {
+  .col-1,
+  .col-1-4 {
     width: 20%;
   }
 
