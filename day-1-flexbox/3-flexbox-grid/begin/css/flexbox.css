@@ -1,12 +1,12 @@
-/* Border box declaration 
+/* Border box declaration
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
@@ -27,17 +27,65 @@ a {
 
 div img {
 	width: 100%;
-	max-width: 225px; 
+	max-width: 225px;
 }
 
 /* grid system -- mobile first! */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    margin: 0 4%;
+    flex: 0 0 92%;
+}
+
+.col-1-2,
+.col-1-4 {
+  background: #fcf;
+}
+
+.col-2 {
+  background: #ffc;
+}
+
+.col-3 {
+  background: #cfc;
+}
+
+.col-4 {
+    background: #fcc;
+}
+
 
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
+  [class*="col-"] {
+      margin-right: 0%;
+  }
 
+  .col-1-2,
+  .col-2 {
+    flex: 0 0 44%;
+  }
+
+  .col-1-4,
+  .col-3,
+  .col-4 {
+    flex: 0 0 92%;
+  }
 }
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-widtph: 768px) {
+  .col-1-2,
+  .col-1-4 {
+    flex: 0 0 20%;
+  }
 
+  .col-3 {
+    flex: 0 0 68%;
+  }
 }
