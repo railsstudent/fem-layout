@@ -180,10 +180,8 @@ footer a {
   div.row {
     padding: 0 2em;
   }
-  aside[class*='sidebar'] {
+  [class*='sidebar'] {
     flex: 0 0 44%;
-    margin-bottom: 2em;
-    margin-right: 1em;
   }
 
   nav li,
@@ -202,9 +200,6 @@ footer a {
     margin-top: 3em;
   }
 
-  div.row .col-1-2 aside {
-    flex: 0 0 44%;
-  }
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) {
@@ -218,6 +213,11 @@ footer a {
     margin-right: 0;
     min-height: 1px;
   }
+
+  [class*='sidebar'] {
+    flex: 0 0 100%;
+  }
+
   .col-1,
   .col-1-2,
   .col-1-4 {
