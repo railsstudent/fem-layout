@@ -253,8 +253,4 @@ footer a {
   nav a {
       padding: 0em 1em 0em 1em;
   }
-
-  footer.row {
-    flex-direction: column;
-  }
 }
