@@ -21,6 +21,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 article img {
   border-radius: 10px;
+}
+img.responsive {
   width: 100%;
   max-width: 250px;
 }
@@ -29,7 +31,7 @@ nav {
 }
 nav ul.full-width {
   list-style-type: none;
-  background-color: #e6bf98; 
+  background-color: #e6bf98;
   padding: .75em;
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
@@ -64,13 +66,11 @@ div.row {
   border-bottom-right-radius: 10px;
   padding: 1em;
 }
-.floatleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
+.floatleft,
 .floatright {
-  float: right;
-  margin: 0 0 1em 1em;
+  float: none;
+  display: block;
+  margin: 0 auto;
 }
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
@@ -89,7 +89,7 @@ div.row {
   width: 100%;
   max-width: 250px;
   display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
-} 
+}
 .sidebar-secondary {
   border-color: #c80060;
 }
@@ -100,7 +100,7 @@ blockquote {
   padding: 0em;
   margin: 0;
 }
-blockquote p, 
+blockquote p,
 blockquote cite {
   padding: 0 1em;
 }
@@ -154,7 +154,7 @@ footer a {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 550px) { 
+@media (min-width: 550px) {
   .wrapper {
       width: 97%;
       max-width: 767px;
@@ -180,7 +180,7 @@ div.row {
   .col-1-2,
   .col-2,
   [class*="sidebar"] {
-    flex: 0 0 44%; 
+    flex: 0 0 44%;
   }
   .col-1-4,
   .col-3,
@@ -191,9 +191,19 @@ div.row {
     margin-left: 0%;
     margin-right: 4%;
   }
+
+  .floatleft {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+  .floatright {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
 }
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 850px) { 
+@media (min-width: 850px) {
   .wrapper {
       width: 97%;
       max-width: 1200px;
@@ -239,7 +249,7 @@ div.row {
   }
   .order-first {
     order: 1;
-  } 
+  }
   .order-second {
     order: 2;
   }
