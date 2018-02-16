@@ -170,6 +170,26 @@ ul.gallery img {
   width: 100%;
 }
 
+.order {
+  max-width: 250px;
+  margin-bottom: 1em;
+}
+
+.order button {
+  background: #c80060;
+  border-radius: 10px;
+  border: 1px solid red;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.order img {
+  width: 100%;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) {
   .wrapper {
@@ -221,6 +241,11 @@ div.row {
 
   ul.gallery li {
     flex: 0 0 50%;
+  }
+
+  .heading {
+    background: url('../img/header-850.jpg') no-repeat;
+    height: 130px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -283,5 +308,10 @@ div.row {
 
   ul.gallery li {
     flex: 0 0 33.3333%;
+  }
+
+  .heading {
+    background: url('../img/header-1200.jpg') no-repeat;
+    height: 183px;
   }
 }
