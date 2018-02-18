@@ -31,7 +31,7 @@ article img {
 }
 nav ul {
   list-style-type: none;
-  background-color: #e6bf98; 
+  background-color: #e6bf98;
   padding: .75em;
   margin: 0;
   border-bottom: 3px solid #cc8850;
@@ -59,6 +59,7 @@ nav a:hover {
   color:#00c4c7;
 }
 
+.gallery,
 .content {
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
@@ -91,7 +92,7 @@ nav a:hover {
   width: 100%;
   max-width: 250px;
   display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
-} 
+}
 .sidebar-secondary {
   border-color: #c80060;
 }
@@ -102,7 +103,7 @@ blockquote {
   padding: 0em;
   margin: 0;
 }
-blockquote p, 
+blockquote p,
 blockquote cite {
   padding: 0 1em;
 }
@@ -128,11 +129,35 @@ footer a {
   color: white;
   text-decoration: none;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+ul.pies {
+  margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+ul.pies img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+ul.pies li {
+  flex: auto;
+}
+
 /* grid system */
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 550px) { 
+@media (min-width: 550px) {
   .wrapper {
       width: 97%;
       max-width: 767px;
@@ -162,7 +187,7 @@ footer a {
 
 }
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 850px) { 
+@media (min-width: 850px) {
   .wrapper {
       width: 97%;
       max-width: 1200px;
